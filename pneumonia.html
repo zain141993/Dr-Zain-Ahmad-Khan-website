@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pneumonia vs. a Bad Chest Cold: How to Tell the Difference — Dr. Zain Ahmad Khan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBF7F0; --bg-warm: #F3E8D8; --ink: #332A20; --ink-soft: #6E6155;
+    --teal: #1F5E52; --teal-deep: #163F38; --amber: #D98E3F; --amber-soft: #F1CB98;
+    --card: #FFFFFF; --line: #E7DBC8;
+    padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #211C16; --bg-warm: #2A231B; --ink: #F3ECE0; --ink-soft: #C4B7A5;
+      --teal: #5FA595; --teal-deep: #7CC0AE; --amber: #E8A85B; --amber-soft: #4A3B27;
+      --card: #2A231B; --line: #3C3226;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #211C16; --bg-warm: #2A231B; --ink: #F3ECE0; --ink-soft: #C4B7A5;
+    --teal: #5FA595; --teal-deep: #7CC0AE; --amber: #E8A85B; --amber-soft: #4A3B27;
+    --card: #2A231B; --line: #3C3226;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Figtree', system-ui, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { font-family: Georgia, 'Times New Roman', serif; font-weight: 600; margin: 0; color: var(--ink); }
+  p { margin: 0; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+  header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: rgba(251,247,240,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) header { background: rgba(33,28,22,0.92); } }
+  :root[data-theme="dark"] header { background: rgba(33,28,22,0.92); }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; max-width: 1080px; margin: 0 auto; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 19px; font-weight: 600; }
+  .brand span { color: var(--teal); }
+  .nav-cta { background: var(--teal); color: #fff; padding: 9px 18px; border-radius: 100px; font-size: 14px; font-weight: 500; cursor:pointer; border:none; font-family:inherit; }
+  .article-page { padding: 60px 0 90px; }
+  .article-wrap { max-width: 860px; }
+  .article-back { display:inline-flex; align-items:center; gap:7px; color:var(--teal); font-weight:700; font-size:14px; margin-bottom:30px; cursor:pointer; background:none; border:none; font-family:inherit; padding:0; }
+  .section-label { text-transform: uppercase; letter-spacing: .08em; font-size: 12.5px; font-weight: 700; color: var(--teal); margin-bottom: 10px; }
+  .article-wrap h2 { font-size: clamp(30px,5vw,50px); line-height: 1.1; letter-spacing: -.03em; max-width: 22ch; margin-bottom: 18px; }
+  .article-lead { font-size: 18px; line-height: 1.7; color: var(--ink-soft); max-width: 68ch; margin-bottom: 36px; }
+  .article-wrap h3 { font-size: 25px; line-height: 1.2; margin: 44px 0 16px; font-weight: 800; }
+  .article-wrap h4 { font-size: 19px; line-height: 1.3; margin: 28px 0 12px; font-weight: 800; color: var(--teal-deep); }
+  .article-wrap p, .article-wrap li { font-size: 16px; line-height: 1.82; color: var(--ink-soft); }
+  .article-note { font-style: italic; margin-bottom: 8px; }
+  .article-wrap ul { padding-left: 22px; margin: 0 0 20px; }
+  .article-wrap li + li { margin-top: 7px; }
+  .article-figure { margin: 36px 0 44px; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
+  .article-figure img { width: 100%; }
+  .article-figure figcaption { padding: 12px 16px; font-size: 13px; color: var(--ink-soft); border-top: 1px solid var(--line); }
+  .article-takeaway { margin-top: 40px; padding: 22px 24px; border-radius: 14px; background: var(--bg-warm); border: 1px solid var(--line); font-size: 16px; line-height: 1.7; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; }
+  footer .wrap { display:flex; align-items:center; justify-content:space-between; flex-wrap: wrap; gap: 10px; }
+  footer p { font-size: 13px; color: var(--ink-soft); }
+  @media (max-width: 640px) { .article-page { padding: 40px 0 60px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">Dr. Zain Ahmad Khan <span>MBBS, FCPS Pulmonology</span></div>
+    <button class="nav-cta" onclick="window.location.href='index.html'">Home</button>
+  </div>
+</header>
+
+<section class="article-page">
+  <div class="wrap article-wrap">
+    <button class="article-back" onclick="window.location.href='index.html#learn'">← Back to Learn</button>
+    <div class="section-label">Patient Guide</div>
+    <h2>Pneumonia vs. a Bad Chest Cold: How to Tell the Difference</h2>
+    <p class="article-lead">Chest colds (often acute bronchitis) and pneumonia can feel similar—cough, chest discomfort, fatigue—but pneumonia is an infection of the lung tissue itself and can become serious, while a chest cold usually stays in the airways and improves on its own.</p>
+
+    <figure class="article-figure">
+      <img src="pneumonia-infographic.jpg" alt="Infographic comparing a chest cold (acute bronchitis) and pneumonia, covering site of infection, fever and severity, and warning signs.">
+      <figcaption>Chest cold vs. pneumonia at a glance — site of infection, fever pattern, and red-flag warning signs.</figcaption>
+    </figure>
+
+    <h3>What each one actually is</h3>
+    <ul>
+      <li><strong>Chest cold (acute bronchitis):</strong> Inflammation of the bronchial tubes (the airways that carry air into your lungs). It's usually viral and often follows a common cold or flu.</li>
+      <li><strong>Pneumonia:</strong> Infection and inflammation of the lung tissue (the tiny air sacs, or alveoli). It can be caused by bacteria, viruses, or fungi and may require antibiotics or hospital care in higher-risk people.</li>
+    </ul>
+    <p>Because both cause cough and chest symptoms, the key is looking at the pattern and severity of symptoms, your risk factors, and how quickly you're getting worse.</p>
+
+    <h3>Symptom checklist: chest cold vs pneumonia</h3>
+    <p class="article-note">Use this as a guide, not a diagnosis.</p>
+
+    <h4>More typical of a chest cold (acute bronchitis)</h4>
+    <ul>
+      <li>Cough that may start dry, then become productive (with mucus)</li>
+      <li>Mucus that's clear, white, yellow, or green</li>
+      <li>Low-grade fever or no fever</li>
+      <li>Chest tightness or soreness from coughing</li>
+      <li>Wheezing or a "rattly" chest</li>
+      <li>Symptoms often build gradually over a few days</li>
+      <li>You generally feel unwell but can still do light activities</li>
+      <li>Cough can linger for 2–3 weeks even as you improve</li>
+    </ul>
+
+    <h4>More typical of pneumonia</h4>
+    <ul>
+      <li>Higher fever (often 101–102°F / 38.3–39°C or more), sometimes with shaking chills</li>
+      <li>Cough with thick yellow/green mucus, sometimes rust-colored or blood-streaked</li>
+      <li>Shortness of breath, especially with minimal activity (e.g., walking across a room, climbing a few stairs)</li>
+      <li>Sharp chest pain that worsens when you breathe deeply or cough</li>
+      <li>Fast breathing or fast heartbeat</li>
+      <li>Marked fatigue, weakness, or confusion (especially in older adults)</li>
+      <li>Symptoms may come on more suddenly and feel "more serious" than a usual cold</li>
+      <li>In older adults: confusion, dizziness, or worsening of existing conditions may be the main sign</li>
+    </ul>
+
+    <div class="article-takeaway">
+      <strong>A simple rule of thumb:</strong> if you feel <em>much</em> more breathless, more feverish, and more "toxic" than you would with a normal bad cold, think pneumonia and get checked.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© Dr. Zain Ahmad Khan — Patient Guide</p>
+    <button class="article-back" onclick="window.location.href='index.html#learn'">← Back to Learn</button>
+  </div>
+</footer>
+
+</body>
+</html>
