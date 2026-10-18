@@ -1,0 +1,26 @@
+name: New video
+description: Add a YouTube video to the Learn section of drzainkhan.com
+title: "New video"
+body:
+  - type: input
+    id: url
+    attributes:
+      label: YouTube link
+      placeholder: https://youtube.com/shorts/...
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Title on the website
+      description: Leave empty to use the YouTube title.
+  - type: textarea
+    id: desc
+    attributes:
+      label: Short description
+      description: One or two sentences under the title. Leave empty for a standard line.
+  - type: textarea
+    id: thumb
+    attributes:
+      label: Thumbnail
+      description: Drag your custom thumbnail in here (landscape, like 1600×1000). Leave empty to use the YouTube thumbnail.

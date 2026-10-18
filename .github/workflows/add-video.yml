@@ -1,0 +1,39 @@
+name: Add video to website
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  add:
+    if: startsWith(github.event.issue.title, 'New video') && github.event.issue.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow==10.4.0
+      - id: add
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/add_video.py
+      - name: Publish
+        run: |
+          git config user.name "video-bot"
+          git config user.email "video-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Add video: ${{ steps.add.outputs.title }}" || echo "Nothing to commit"
+          git push
+      - name: Reply and close
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then
+            gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }} --comment "Done: the video is now in the Learn section at https://drzainkhan.com/#learn (live in 1-2 minutes)."
+          else
+            gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} --body "Something went wrong. Open the Actions tab to see the error, or paste it to Claude."
+          fi
